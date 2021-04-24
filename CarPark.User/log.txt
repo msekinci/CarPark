@@ -1,0 +1,96 @@
+2021-03-27 03:11:47.786 +03:00 [INF] User profile is available. Using 'C:\Users\Mehmet Serkan Ekinci\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-27 03:11:48.055 +03:00 [INF] Now listening on: https://localhost:5001
+2021-03-27 03:11:48.055 +03:00 [INF] Now listening on: http://localhost:5000
+2021-03-27 03:11:48.056 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-27 03:11:48.056 +03:00 [INF] Hosting environment: Development
+2021-03-27 03:11:48.057 +03:00 [INF] Content root path: C:\Users\Mehmet Serkan Ekinci\source\repos\CarPark\CarPark.User
+2021-03-27 03:11:48.843 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2021-03-27 03:11:48.874 +03:00 [INF] Executing endpoint 'CarPark.User.Controllers.HomeController.Index (CarPark.User)'
+2021-03-27 03:11:48.926 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CarPark.User.Controllers.HomeController (CarPark.User).
+2021-03-27 03:11:48.979 +03:00 [INF] Executing action method CarPark.User.Controllers.HomeController.Index (CarPark.User) - Validation state: "Valid"
+2021-03-27 03:11:48.982 +03:00 [INF] My first log
+2021-03-27 03:11:48.986 +03:00 [INF] Executed action method CarPark.User.Controllers.HomeController.Index (CarPark.User), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.0444ms.
+2021-03-27 03:11:49.005 +03:00 [INF] Executing ViewResult, running view Index.
+2021-03-27 03:11:49.085 +03:00 [INF] Executed ViewResult - view Index executed in 84.333ms.
+2021-03-27 03:11:49.087 +03:00 [INF] Executed action CarPark.User.Controllers.HomeController.Index (CarPark.User) in 159.4713ms
+2021-03-27 03:11:49.088 +03:00 [INF] Executed endpoint 'CarPark.User.Controllers.HomeController.Index (CarPark.User)'
+2021-03-27 03:11:49.093 +03:00 [INF] Request finished in 252.8242ms 200 text/html; charset=utf-8
+2021-03-27 03:11:49.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js  
+2021-03-27 03:11:49.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css  
+2021-03-27 03:11:49.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css  
+2021-03-27 03:11:49.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js  
+2021-03-27 03:11:49.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2021-03-27 03:11:49.139 +03:00 [INF] The file /css/site.css was not modified
+2021-03-27 03:11:49.139 +03:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2021-03-27 03:11:49.139 +03:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2021-03-27 03:11:49.139 +03:00 [INF] The file /js/site.js was not modified
+2021-03-27 03:11:49.139 +03:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2021-03-27 03:11:49.141 +03:00 [INF] Request finished in 11.3477ms 304 application/javascript
+2021-03-27 03:11:49.141 +03:00 [INF] Request finished in 11.4017ms 304 text/css
+2021-03-27 03:11:49.141 +03:00 [INF] Request finished in 11.5318ms 304 application/javascript
+2021-03-27 03:11:49.144 +03:00 [INF] Request finished in 13.6736ms 304 application/javascript
+2021-03-27 03:11:49.146 +03:00 [INF] Request finished in 16.331ms 304 text/css
+2021-03-27 03:21:02.439 +03:00 [INF] User profile is available. Using 'C:\Users\Mehmet Serkan Ekinci\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-27 03:21:02.840 +03:00 [INF] Now listening on: https://localhost:5001
+2021-03-27 03:21:02.857 +03:00 [INF] Now listening on: http://localhost:5000
+2021-03-27 03:21:02.858 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-27 03:21:02.858 +03:00 [INF] Hosting environment: Development
+2021-03-27 03:21:02.859 +03:00 [INF] Content root path: C:\Users\Mehmet Serkan Ekinci\source\repos\CarPark\CarPark.User
+2021-03-27 03:21:03.435 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2021-03-27 03:21:03.454 +03:00 [INF] Executing endpoint 'CarPark.User.Controllers.HomeController.Index (CarPark.User)'
+2021-03-27 03:21:03.486 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CarPark.User.Controllers.HomeController (CarPark.User).
+2021-03-27 03:21:03.518 +03:00 [INF] Executing action method CarPark.User.Controllers.HomeController.Index (CarPark.User) - Validation state: "Valid"
+2021-03-27 03:21:03.521 +03:00 [INF] My first log
+2021-03-27 03:21:03.526 +03:00 [INF] Executed action method CarPark.User.Controllers.HomeController.Index (CarPark.User), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.8336ms.
+2021-03-27 03:21:03.543 +03:00 [INF] Executing ViewResult, running view Index.
+2021-03-27 03:21:03.606 +03:00 [INF] Executed ViewResult - view Index executed in 68.0967ms.
+2021-03-27 03:21:03.607 +03:00 [INF] Executed action CarPark.User.Controllers.HomeController.Index (CarPark.User) in 120.0804ms
+2021-03-27 03:21:03.608 +03:00 [INF] Executed endpoint 'CarPark.User.Controllers.HomeController.Index (CarPark.User)'
+2021-03-27 03:21:03.611 +03:00 [INF] Request finished in 178.7007ms 200 text/html; charset=utf-8
+2021-03-27 03:21:03.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js  
+2021-03-27 03:21:03.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css  
+2021-03-27 03:21:03.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css  
+2021-03-27 03:21:03.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js  
+2021-03-27 03:21:03.640 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2021-03-27 03:21:03.645 +03:00 [INF] The file /css/site.css was not modified
+2021-03-27 03:21:03.645 +03:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2021-03-27 03:21:03.645 +03:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2021-03-27 03:21:03.645 +03:00 [INF] The file /js/site.js was not modified
+2021-03-27 03:21:03.645 +03:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2021-03-27 03:21:03.647 +03:00 [INF] Request finished in 7.6218ms 304 text/css
+2021-03-27 03:21:03.647 +03:00 [INF] Request finished in 7.6218ms 304 text/css
+2021-03-27 03:21:03.647 +03:00 [INF] Request finished in 7.6218ms 304 application/javascript
+2021-03-27 03:21:03.648 +03:00 [INF] Request finished in 8.8707ms 304 application/javascript
+2021-03-27 03:21:03.649 +03:00 [INF] Request finished in 9.9888ms 304 application/javascript
+2021-03-27 11:09:09.969 +03:00 [INF] Application is shutting down...
+2021-04-24 23:38:04.620 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.<>c__DisplayClass8_0.<CreateActivateInfo>b__1(ViewContext context)
+   at Microsoft.Extensions.Internal.PropertyActivator`1.Activate(Object instance, TContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|21_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
