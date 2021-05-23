@@ -8,8 +8,6 @@ using MongoDB.Driver;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
-using System.Threading;
 
 namespace CarPark.User.Controllers
 {

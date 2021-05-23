@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CarPark.Business\CarPark.Business.csproj" />
     <ProjectReference Include="..\CarPark.Entities\CarPark.Entities.csproj" />
   </ItemGroup>
 

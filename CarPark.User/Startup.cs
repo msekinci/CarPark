@@ -1,19 +1,18 @@
+using CarPark.Core.Repository.Abstract;
+using CarPark.DataAccess.Repository;
+using CarPark.DataAccess.Settings;
 using CarPark.User.Resources;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace CarPark.User
 {
@@ -30,7 +29,7 @@ namespace CarPark.User
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddLocalization(opt => 
+            services.AddLocalization(opt =>
             {
                 opt.ResourcesPath = "Resources";
             });
@@ -45,6 +44,12 @@ namespace CarPark.User
                 } //shared istersek
                 );
 
+            services.Configure<MongoSettings>(options => 
+            {
+                options.ConnectionString = Configuration.GetSection("MongoConnection:ConnectionString").Value;
+                options.Database = Configuration.GetSection("MongoConnection:Database").Value;
+            });
+            services.AddScoped(typeof(IRepository<>), typeof(MongoRepositoryBase<>));
             services.Configure<RequestLocalizationOptions>(opt =>
             {
                 var supportedCultures = new List<CultureInfo>
