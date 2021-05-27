@@ -26,37 +26,6 @@ namespace CarPark.User.Controllers
 
         public IActionResult Index()
         {
-            var database = client.GetDatabase("CarParkDB");
-
-            var jsonString = System.IO.File.ReadAllText("cities.json");
-            var citiesModel = JsonConvert.DeserializeObject<List<cities>>(jsonString);
-            var citiesCollection = database.GetCollection<City>("City");
-
-            foreach (var item in citiesModel)
-            {
-                var city = new City()
-                {
-                    Id = ObjectId.GenerateNewId(),
-                    Name = item.name,
-                    Plate = item.plate,
-                    Latitude = item.latitude,
-                    Longitude = item.longitude,
-                    Counties = new List<County>()
-                };
-
-                foreach (var c in item.counties)
-                {
-                    city.Counties.Add(new County
-                    {
-                        Id = ObjectId.GenerateNewId(),
-                        Name = c,
-                        Latitude = "",
-                        Longitude = ""
-                    });
-                }
-                citiesCollection.InsertOne(city);
-            }
-
             return View();
         }
 
@@ -69,6 +38,11 @@ namespace CarPark.User.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Dashboard()
+        {
+            return View();
         }
     }
 }
