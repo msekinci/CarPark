@@ -1,15 +1,19 @@
+using AspNetCore.Identity.MongoDbCore.Models;
 using CarPark.Core.Repository.Abstract;
 using CarPark.DataAccess.Repository;
 using CarPark.DataAccess.Settings;
+using CarPark.Entities.Concrete;
 using CarPark.User.Resources;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
@@ -28,6 +32,35 @@ namespace CarPark.User
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddAuthentication(option =>
+            {
+                option.DefaultScheme = IdentityConstants.ApplicationScheme;
+                option.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+            }).AddIdentityCookies(o => 
+            {
+                //
+            });
+
+            services.AddIdentityCore<Personel>(option =>
+            {
+                //option.Password ile þartlar eklenebilir
+            })
+            .AddRoles<MongoIdentityRole>()
+            .AddMongoDbStores<Personel, MongoIdentityRole, Guid>(
+                Configuration.GetSection("MongoConnection:ConnectionString").Value,
+                Configuration.GetSection("MongoConnection:Database").Value)
+            .AddSignInManager()
+            .AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(option =>
+            {
+                option.Cookie.HttpOnly = true;
+                option.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                option.LoginPath = "/Account/Login";
+                option.SlidingExpiration = true;
+            });
+
             services.AddControllersWithViews();
             services.AddLocalization(opt =>
             {
@@ -37,14 +70,15 @@ namespace CarPark.User
             services.AddMvc()
                 .AddViewLocalization()
                 .AddDataAnnotationsLocalization(
-                options => options.DataAnnotationLocalizerProvider = (type, factory) => {
+                options => options.DataAnnotationLocalizerProvider = (type, factory) =>
+                {
 
                     var assemblyName = new AssemblyName(typeof(SharedModelResource).GetTypeInfo().Assembly.FullName);
                     return factory.Create(nameof(SharedModelResource), assemblyName.Name);
                 } //shared istersek
                 );
 
-            services.Configure<MongoSettings>(options => 
+            services.Configure<MongoSettings>(options =>
             {
                 options.ConnectionString = Configuration.GetSection("MongoConnection:ConnectionString").Value;
                 options.Database = Configuration.GetSection("MongoConnection:Database").Value;
@@ -97,7 +131,7 @@ namespace CarPark.User
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
@@ -107,7 +141,7 @@ namespace CarPark.User
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{culture=tr-TR}/{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
